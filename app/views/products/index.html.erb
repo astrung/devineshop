@@ -1,0 +1,16 @@
+<div class="list_products">
+  <%= will_paginate @products %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>name</th>
+        <th>price</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "product", collection: @products, as: :product %>
+    </tbody>
+  </table>
+</div>

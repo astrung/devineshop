@@ -1,0 +1,16 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: 1
+  socket: /var/run/mysqld/mysqld.sock
+  strict: false
+
+development:
+  <<: *default
+  database: devine_shop_dev
+
+production:
+  <<: *default
+  database: devine_shop_prd
